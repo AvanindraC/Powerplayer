@@ -7,10 +7,12 @@ import pafy
 import os
 @click.group(
     cls=HelpColorsGroup, help_headers_color="yellow", help_options_color="cyan")
-@click.version_option('0.1.1')
+@click.version_option('0.1.0')
 def main():
     """PowerPlayer - Play music in your terminal(Exclusive to windows only)"""
-@main.command('setup', help = 'There are a few things to setup before using ')
+@main.command('init')
+def init():
+    os.mkdir(os.path.expanduser("~"), ".PowerPlayer", "Audio")
 @main.command('playfromyt', help = 'Play music from youtube. Give the song name')
 @click.argument('song', nargs = 1)
 def playfromyt(song):
@@ -31,12 +33,10 @@ def playfromyt(song):
     click.secho(clip2)
     video = pafy.new(clip2)
     aud = video.getbestaudio(preftype="mp3", ftypestrict=True)
-    try:
-        dir = os.mkdir('~\\Audio')
-    except FileExistsError as e:
-        dir = os.path.join('~\\Audio') 
+    dir = os.path.expanduser("~"), ".PowerPlayer", "Audio"
+    
     aud.download(dir)
-    playsound(os.path.join(dir+str('\\')+yt_title+str('.mp3')))
+    playsound(os.path.join(dir+'\\'+yt_title+'.mp3'))
     
     
   
@@ -48,3 +48,4 @@ def playfrompc(dir):
     
 if __name__ == '__main__':
     main()
+    playfromyt('Numb')
