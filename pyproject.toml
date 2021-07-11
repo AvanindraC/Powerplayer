@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "powerplayer"
+version = "0.1.0"
+description = "A python based command line interface to play music through the terminal, exclusive to windows"
+authors = ["Avanindra Chakraborty <avanindra.d.chakraborty@gmail.com>"]
+license = "MIT"
+readme="README.md"
+homepage= "https://github.com/AvanindraC/Powerplayer"
+repository = "https://github.com/AvanindraC/Powerplayer"
+
+classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+	"Programming Language :: Python :: 3.9",
+        "Operating System :: OS Independent"
+    ]
+
+[tool.poetry.dependencies]
+python = "^3.6.6"
+click = "^8.0.1"
+youtube_dl = "^2021.6.6"
+playsound = "^1.2.2"
+bs4 = "^0.0.1"
+click-help-colors = "^0.9"
+pafy = "^0.5.5"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+pplay = "powerplayer:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
