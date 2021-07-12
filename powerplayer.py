@@ -4,19 +4,14 @@ from click_help_colors import HelpColorsGroup, HelpColorsCommand
 import re, requests, subprocess, urllib.parse, urllib.request
 from bs4 import BeautifulSoup
 import os
-from pytube import YouTube
+import vlc
+import pafy
+from time import sleep, time
 @click.group(
     cls=HelpColorsGroup, help_headers_color="yellow", help_options_color="cyan")
 @click.version_option('0.1.0')
 def main():
     """PowerPlayer - Play music in your terminal"""
-@main.command('init', help = 'Initiates the progra. Run when first time using this')
-def init():
-    try:
-        os.mkdir(os.path.join(os.path.expanduser("~"), ".powerplayer"))
-        os.mkdir(os.path.join(os.path.expanduser("~"), ".powerplayer", "Audio"))
-    except FileExistsError as e:
-        pass
 @main.command('playfromyt', help = 'Play music from youtube. Give the song name')
 @click.argument('song', nargs = 1)
 def playfromyt(song):
@@ -33,18 +28,21 @@ def playfromyt(song):
     for concatMusic1 in yt_title:
         pass
 
-    click.secho(concatMusic1['content'])
+    
     click.secho(clip2)
-    yt = YouTube(clip2)
-    a = yt.title()
-    stream = yt.streams.filter(only_audio=True)
     dir = os.path.join(os.path.expanduser("~"), ".powerplayer", "Audio")
-    stream.download(dir, a)
-    name = a+'.mp3'
-    playsound(os.path.join("dir", "name"))
-   
-    
-    
+    video = pafy.new(clip2)
+
+    best = video.getbestaudio()
+    player = vlc.Instance()
+    # creating vlc media player object
+    media = vlc.MediaPlayer(best.url)
+    click.secho(f'Playing...')
+    click.secho(concatMusic1['content'])
+    media.play()
+    start = time()
+    while (time() - start < 100001):
+        sleep(100001 - (time() - start))
   
 
 @main.command('playfrompc', help = "Play an audio file in your pc")
