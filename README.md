@@ -21,13 +21,17 @@ Open the terminal and type
 After installation, type `pplay` in the terminal 
 It is fine if the output is this
 ![image](https://user-images.githubusercontent.com/77975448/125310279-0f638000-e350-11eb-9afe-5799fd418cc0.png)
-Then to play music from youtube, type
+### Then to play music from youtube, type
 ```pplay playfromyt songname```
 Note: The songname has to be in 1 word. If it has multiple words, 
 use underscore( _ )
 The output should look like this
 
 ![image](https://user-images.githubusercontent.com/77975448/125312335-cf050180-e351-11eb-9aae-2f5d20c1df9b.png)
+### To play music from file
+
+Type
+```pplay playfrompc Filewithdirectory```
 
 
 
