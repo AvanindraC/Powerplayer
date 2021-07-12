@@ -1,4 +1,5 @@
 # Powerplayer
+https://pypi.org/project/powerplayer/
 A python based terminal music player
 Inspired by [Pauloo27](https://github.com/Pauloo27)'s [Tuner](https://github.com/Pauloo27/tuner)
 ## OS
