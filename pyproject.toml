@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "powerplayer"
 version = "0.1.0"
-description = "A python based command line interface to play music through the terminal, exclusive to windows"
-authors = ["Avanindra Chakraborty <avanindra.d.chakraborty@gmail.com>"]
+description = "A command line interface to play music"
+authors = ["Avanindra Chakraborty"]
 license = "MIT"
 readme="README.md"
 homepage= "https://github.com/AvanindraC/Powerplayer"
@@ -15,17 +15,17 @@ classifiers=[
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
 	"Programming Language :: Python :: 3.9",
-        "Operating System :: OS Independent"
+        "Operating System :: OS Independent",
     ]
 
 [tool.poetry.dependencies]
-python = "^3.6.6"
+python = "^3.7"
 click = "^8.0.1"
-youtube_dl = "^2021.6.6"
-playsound = "^1.2.2"
+click-help-colors = "^0.9.1"
 bs4 = "^0.0.1"
-click-help-colors = "^0.9"
-pafy = "^0.5.5"
+requests = "^2.25.1"
+playsound = "^1.2.2"
+pytube = "^10.9.2"
 
 [tool.poetry.dev-dependencies]
 
