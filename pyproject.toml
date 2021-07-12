@@ -25,7 +25,8 @@ click-help-colors = "^0.9.1"
 bs4 = "^0.0.1"
 requests = "^2.25.1"
 playsound = "^1.2.2"
-pytube = "^10.9.2"
+pafy = "^0.5.5"
+python-vlc = "^3.0.12118"
 
 [tool.poetry.dev-dependencies]
 
