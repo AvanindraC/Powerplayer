@@ -32,6 +32,8 @@ The output should look like this
 
 ![image](https://user-images.githubusercontent.com/77975448/125312335-cf050180-e351-11eb-9aae-2f5d20c1df9b.png)
 
+To after the song has ended, press Ctrl+C to exit and play another song
+
 ### To play music from file
 
 Type
