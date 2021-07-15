@@ -1,6 +1,7 @@
 # Powerplayer
 https://pypi.org/project/powerplayer/
 A python based terminal music player
+https://static.pepy.tech/personalized-badge/powerplayer?period=total&units=international_system&left_color=black&right_color=blue&left_text=Downloads
 Inspired by [Pauloo27](https://github.com/Pauloo27)'s [Tuner](https://github.com/Pauloo27/tuner)
 ## OS
 Tested in Windows 10(x64)
