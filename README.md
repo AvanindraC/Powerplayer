@@ -25,7 +25,7 @@ Open the terminal and type
 After installation, type `pplay` in the terminal 
 It is fine if the output is this
 
-![image](https://user-images.githubusercontent.com/77975448/125310279-0f638000-e350-11eb-9afe-5799fd418cc0.png)
+![image](https://user-images.githubusercontent.com/77975448/127959037-abe6f843-fafd-4f89-9c45-91d2bd6867b6.png)
 
 ### Then to play music from youtube, type
 ```pplay playfromyt songname```
