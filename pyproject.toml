@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "powerplayer"
-version = "0.1.0"
+version = "0.1.5"
 description = "A command line interface to play music"
 authors = ["Avanindra Chakraborty"]
 license = "MIT"
