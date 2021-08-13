@@ -3,11 +3,6 @@ import click
 from click_help_colors import HelpColorsGroup, HelpColorsCommand
 import re, requests, subprocess, urllib.parse, urllib.request
 from bs4 import BeautifulSoup
-from playsound import playsound
-import click
-from click_help_colors import HelpColorsGroup, HelpColorsCommand
-import re, requests, subprocess, urllib.parse, urllib.request
-from bs4 import BeautifulSoup
 import os
 import vlc
 import pafy
