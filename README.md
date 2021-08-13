@@ -17,6 +17,7 @@ Open the powershell and type
 ### Linux/Mac
 Open the terminal and type
 ```pip3 install powerplayer```
+Note: Install vlc using dnf or apt to use it
 
 ## Usage
 After installation, type `pplay` in the terminal 
