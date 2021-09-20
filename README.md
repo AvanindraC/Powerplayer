@@ -32,10 +32,6 @@ The output should look like this
 
 ![image](https://user-images.githubusercontent.com/77975448/127959037-abe6f843-fafd-4f89-9c45-91d2bd6867b6.png)
 
-### To play music from file
-
-Type
-```pplay playfrompc Filewithdirectory```
 
 
 
