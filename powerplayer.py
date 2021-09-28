@@ -1,4 +1,4 @@
-
+from youtube_search import YoutubeSearch 
 from playsound import playsound
 import click
 from click_help_colors import HelpColorsGroup, HelpColorsCommand
@@ -20,7 +20,7 @@ def playfromyt(song):
     music_name = " ".join(song)
     
     
-    results = YoutubeSearch(song, max_results=1).to_dict()
+    results = YoutubeSearch(music_name, max_results=1).to_dict()
     res = results[0]
     url= res["url_suffix"]
     url=f'https://www.youtube.com{url}'
@@ -31,7 +31,7 @@ def playfromyt(song):
     best = video.getbestaudio()
     
     media = vlc.MediaPlayer(best.url)
-    click.secho(f'Playing{title}')
+    click.secho(f'Playing {title}')
 
 
     media.play()
@@ -81,7 +81,7 @@ def playlist():
             best = video.getbestaudio()
     
             media = vlc.MediaPlayer(best.url)
-            click.secho(f'Playing{title}')
+            click.secho(f'Playing {title}')
 
 
             media.play()
