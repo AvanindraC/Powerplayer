@@ -28,7 +28,7 @@ Open the terminal and type
 
 After installation, type `pplay` in the terminal 
 It is fine if the output is this
-![image](https://user-images.githubusercontent.com/77975448/127959037-abe6f843-fafd-4f89-9c45-91d2bd6867b6.png)
+![Screenshot (214)](https://user-images.githubusercontent.com/77975448/135022761-2d81e153-df2c-4a04-aa32-ff0dd0408201.png)
 
 ### Then to play music from youtube, type
 
@@ -36,12 +36,21 @@ It is fine if the output is this
 
 The output should look like this
 
-![image](https://user-images.githubusercontent.com/77975448/125312335-cf050180-e351-11eb-9aae-2f5d20c1df9b.png)
+![Screenshot (215)](https://user-images.githubusercontent.com/77975448/135022943-c7c9c1d1-11a8-4a76-b01e-da59625a1a64.png)
+
 
 ### Powerplayer has now got playlists
 
 Type ```pplay add songname```
 to add a song to the playlist
 
+![Screenshot (216)](https://user-images.githubusercontent.com/77975448/135023053-b046fc13-a9c7-44de-ba6b-943ec47dd18a.png)
+
 Type ```pplay playlist``` 
-to play the playlist
+to play the entire playlist
+
+![Screenshot (217)](https://user-images.githubusercontent.com/77975448/135023946-e5bc946f-5dd4-4254-b11b-03ec65a56c62.png)
+
+
+
+
