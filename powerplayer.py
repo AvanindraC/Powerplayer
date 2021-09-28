@@ -11,7 +11,7 @@ from time import sleep, time
 import os
 @click.group(
     cls=HelpColorsGroup, help_headers_color="yellow", help_options_color="cyan")
-@click.version_option('0.1.8')
+@click.version_option('0.1.9')
 def main():
     """PowerPlayer - Play music in your terminal"""
 @main.command('yt', help = 'Play music from youtube. Give the song name')
@@ -19,25 +19,20 @@ def main():
 def playfromyt(song):
     music_name = " ".join(song)
     
-    query_string = urllib.parse.urlencode({"search_query": music_name})
-    formatUrl = urllib.request.urlopen("https://www.youtube.com/results?" + query_string)
-    search_results = re.findall(r"watch\?v=(\S{11})", formatUrl.read().decode())
-    clip = requests.get("https://www.youtube.com/watch?v=" + "{}".format(search_results[0]))
-    clip2 = "https://www.youtube.com/watch?v=" + "{}".format(search_results[0])
-    inspect = BeautifulSoup(clip.content, "html.parser")
-    yt_title = inspect.find_all("meta", property="og:title")
-    for concatMusic1 in yt_title:
-        pass
-
     
-    click.secho(clip2)
-    video = pafy.new(clip2)
+    results = YoutubeSearch(song, max_results=1).to_dict()
+    res = results[0]
+    url= res["url_suffix"]
+    url=f'https://www.youtube.com{url}'
+    title = res["title"]
+    click.secho(url)
+    video = pafy.new(url)
     length = video.length
     best = video.getbestaudio()
     
     media = vlc.MediaPlayer(best.url)
-    click.secho(f'Playing...')
-    click.secho(concatMusic1['content'])
+    click.secho(f'Playing{title}')
+
 
     media.play()
     start = time()
@@ -75,25 +70,20 @@ def playlist():
             song = line.strip()
             music_name = " ".join(song)
     
-            query_string = urllib.parse.urlencode({"search_query": music_name})
-            formatUrl = urllib.request.urlopen("https://www.youtube.com/results?" + query_string)
-            search_results = re.findall(r"watch\?v=(\S{11})", formatUrl.read().decode())
-            clip = requests.get("https://www.youtube.com/watch?v=" + "{}".format(search_results[0]))
-            clip2 = "https://www.youtube.com/watch?v=" + "{}".format(search_results[0])
-            inspect = BeautifulSoup(clip.content, "html.parser")
-            yt_title = inspect.find_all("meta", property="og:title")
-            for concatMusic1 in yt_title:
-                pass
-
-    
-            click.secho(clip2)
-            video = pafy.new(clip2)
+            results = YoutubeSearch(song, max_results=1).to_dict()
+            res = results[0]
+            url= res["url_suffix"]
+            url=f'https://www.youtube.com{url}'
+            title = res["title"]
+            click.secho(url)
+            video = pafy.new(url)
+            length = video.length
             best = video.getbestaudio()
     
             media = vlc.MediaPlayer(best.url)
-            click.secho(f'Playing...')
-            click.secho(concatMusic1['content'])
-            length = video.length
+            click.secho(f'Playing{title}')
+
+
             media.play()
             start = time()
             while (time() - start < length):
