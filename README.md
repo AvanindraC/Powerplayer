@@ -3,8 +3,7 @@ https://pypi.org/project/powerplayer/
 A python based terminal music player
 Inspired by [Pauloo27](https://github.com/Pauloo27)'s [Tuner](https://github.com/Pauloo27/tuner)
 
-<img src="https://img.shields.io/badge/python-00aa55?style=for-the-badge&logo=python&logoColor=white">
-<img src="https://img.shields.io/badge/music-1b77dd?style=for-the-badge&logo=youtube&logoColor=white">
+<img src="https://img.shields.io/badge/python-00aa55?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/music-1b77dd?style=for-the-badge&logo=youtube&logoColor=white">
 
 ## OS
 
