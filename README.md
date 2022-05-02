@@ -29,3 +29,21 @@ It is fine if the output is this
 The output should look like this
 
 ![image](https://user-images.githubusercontent.com/77975448/125312335-cf050180-e351-11eb-9aae-2f5d20c1df9b.png)
+
+## Powerplayer now has playlists!
+
+### Add Command
+
+Add Command is used to add music to playlists. It creates a playlist if one does not exist already.
+
+The playlist is stored locally and is stored in ~/.pplay from where you can manually edit it or move it if you want
+
+![image](https://user-images.githubusercontent.com/77975448/166191244-f4afcea0-d7fa-4f37-9577-c0f52f3e5aee.png)
+
+### Clear Command
+
+As the name suggests, the clear command clears your playlist
+
+### Playlist command
+
+Plays the songs in your playlist, in the order they were given or randomly, based on your choice
