@@ -21,7 +21,7 @@ ydl_opts = {
 
 @click.group(
     cls=HelpColorsGroup, help_headers_color="yellow", help_options_color="cyan")
-@click.version_option('0.2.0')
+@click.version_option('0.2.1')
 def main():
     """PowerPlayer - Play music in your terminal"""
 @main.command('yt', help = 'Play music from youtube. Give the song name')
