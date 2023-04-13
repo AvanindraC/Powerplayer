@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "powerplayer"
-version = "0.2.0"
+version = "0.2.1"
 description = "A command line interface to play music"
 authors = ["Avanindra Chakraborty"]
 license = "MIT"
@@ -28,7 +28,7 @@ requests = "^2.25.1"
 playsound = "^1.2.2"
 python-vlc = "^3.0.12118"
 youtube_dl = "^2021.6.6"
-youtube-search = "2.1.0"
+youtube-search = "^2.1.0"
 [tool.poetry.dev-dependencies]
 
 [tool.poetry.scripts]
